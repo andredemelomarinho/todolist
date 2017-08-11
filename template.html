@@ -1,0 +1,226 @@
+<style>
+
+body
+{
+    font-family: arial,verdana,sans-serif;
+    font-size: 10pt;
+     <!--background-image:url('app.images/LOGOMIRNACOSMETICOS1.png');-->
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+html, body, #pagecontent {height: 100%;}
+ 
+body > #pagecontent {height: auto; min-height: 100%;}
+
+
+
+#footer {position: relative;
+
+	background-color:#EDEDED;
+	color: #333;
+	text-decoration: none;
+	border-bottom:20px solid #EDEDED;
+	margin-top: -5px; /* valor negativo da altura do rodapé */
+	height: 10px;
+	clear:both;} 
+	
+#menu ul {
+	padding:0px;
+	margin:0px;
+	background-color:#EDEDED;
+	list-style:none;
+	}
+	
+	
+#menu ul li { display: inline; }
+
+#menu ul li a {
+	padding: 2px 10px;
+	display: inline-block;
+ 
+	/* visual do link */
+	background-color:#EDEDED;
+	color: #333;
+	text-decoration: none;
+	border-bottom:3px solid #EDEDED;
+#inativo
+{
+    background-color: #E2EBED;
+    border-left: 2px solid white;
+    height: 20px;
+    padding-top: 5px;
+    padding-left: 4px;
+    margin-bottom: 2px;
+}
+
+#ativo
+{
+    background-color: #c0c0c0;
+    border-left: 2px solid red;
+    height: 20px;
+    padding-top: 5px;
+    padding-left: 4px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+#pageheader
+{
+    border: none;
+    width:760px;
+    height:112;
+    overflow: none;
+    margin-bottom:0px;
+
+}
+
+#pagebody
+{
+    background-color: white;
+    width:760px;
+    border: 1px solid #999999;
+}
+
+
+#pageleft
+{
+    width:180;
+    margin-left: 0px;
+    margin-right: 0px;
+    float:left;
+    text-align:left;
+    border: 1px solid #000000;
+    font-size: 10pt;
+    font-family: arial,verdana,sans-serif;
+    font-weight: bold;
+}
+
+#pagecontent
+{
+    margin-right: 0px;
+    margin-left: 20px;
+    margin-top:0px;
+    width:550px;
+    overflow:auto;
+     padding-bottom: 150px;
+     text-align:left;
+    color: #333333;
+}
+
+#pageboth
+{
+    clear:both;
+}
+</style>
+
+<style>
+/* Reset CSS */
+*, *:after, *:before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* Fundo do menu */
+.menu{
+  background: #EDEDED;
+}
+/* Remove as bolinhas do lado das listas */
+.menu .menu-list, .menu .sub-menu{
+  list-style: none;
+}
+/* Configura todos os links do nosso menu */
+.menu a{
+  color: #000;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing:0.2em;
+}
+/* Faz os <li>s ficarem na horizontal */
+.menu > .menu-list > li{
+  float: left;
+  position: relative;
+}
+/* Configura os links do menu principal */
+.menu > .menu-list > li > a {
+  padding: 20px;
+  margin: 0 5px;
+  background: #EDEDED;
+}
+/* Configura o fundo do menu principal quando com mouse hover */
+.menu > .menu-list > li:hover a {
+  background: #EDEDED;
+}
+/* Mostra o submenu no evento de mouse hover */
+.menu > .menu-list > li:hover > .sub-menu {
+  display: block;
+}
+/* Configura o estilo do submenu */
+.menu > .menu-list > li > .sub-menu {
+  position: absolute;
+  top: 50px;
+  left: 5px;
+  background: #EDEDED;
+  min-width: 200px;
+  z-index: 1000;
+  display: none;
+}
+/* Configura os links do submenu */
+.menu > .menu-list > li > .sub-menu > li > a {
+	padding: 10px 20px;
+}
+/* Clearfix para o menu */
+.menu:after {
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+</style>
+
+<?php
+if(session_start() ==null)
+{
+session_start();
+}
+
+?>
+
+<body  id="body">
+<center>
+
+<div class="menu">
+	<ul class="menu-list">
+		<li>
+			<a href="?class=TarefaList">Tarefas</a></li>
+		<li>
+			<a href="?class=GrupoList">Grupos</a></li>
+		<li>
+
+		
+	</ul>
+</div>
+    <div id="pagecontent">
+        
+	#CONTENT#
+<br/>
+<div id="footer">
+ Sistema desenvolvido por André Marinho WebMaster<br/>
+ Direitos reservados - 2015 - 2020
+</div>   
+
+    </div>
+    <div id="pageboth">
+    </div>
+</div>
+</center>
+</body>
+	
